@@ -2,33 +2,33 @@
    Git is software tool for development team to collaborate and track the progress the project.
    It is used in Software Development to collaborate in a team environment by contributing to the project in main/master repo of a project, keeps track of all individuals work and changes. Creates a timestamp to help developer fix issue if an issue occurs from collaboration.
 
-1. What is the difference between Git and GitHub?
+2. What is the difference between Git and GitHub?
    Git is the server for the team collaboration platform on local machine. GitHub is the UI to host Git repo remotely.
 
-1. Explain HEAD, HEAD~1 and HEAD~2.
+3. Explain HEAD, HEAD~1 and HEAD~2.
    HEAD shows current commit of the commit history
    HEAD~1 shows a commit before the current one.
    HEAD~2 shows two commits before the current one.
 
-1. Explain the difference between git restore, git reset and git revert.
+4. Explain the difference between git restore, git reset and git revert.
    Git restore: to discard changes to files and haven’t committed yet. IT can also remove a file from a staging area.
    Git reset moves HEAD/branch pointer backward. There are three Git reset modes – soft, mixed, hard
    Git reset –soft: moves the branch back but keeps the changes staged. It is useful when you want to redo changes
    Git reset –mixed: Default mode. Moves HEAD backward, keeps the file changes, unstages those changes.
    Git reset –hard: Needs to be careful around this command. Moves HEAD backward and removes commit from the branch, or any associated working -directory changes.
 
-1. Explain the difference between git fetch and git pull.
+5. Explain the difference between git fetch and git pull.
    Git fetch – it downloads the latest commits from GitHub but does not modify your current files.
    Gt pull – it first fetch and update latest changes into your local branch.
 
-1. What is a branch and why is branching useful in team development?
+6. What is a branch and why is branching useful in team development?
    Git branch is a separate line of development in a git repository. It allows developers to work on changes independently without immediately affecting the main codebase.
    It is useful because it allows developers to work on changes independently without changing the main codebase. It prevents the any issue caused by new changes in main branch. It allows developers to review works before merging to main branch. Allows collaboration because team can work on different features and part of the project to achieve team goal.
 
-1. What is a merge conflict and how is it resolved?
+7. What is a merge conflict and how is it resolved?
    A merge conflict happens when Git cannot automatically combine changes from two branches because they modified the same part of a code/file or the changes overlaps. To resolves merge issue, developer needs to know business requirement and the final code that should be in the file. Depending on that the developer can make decision on whether to abort the merge or roll back on the branch to make changes and push the changes again. To resolve the issue, use git status to identify the conflicted files. Open those files to review conflict markers such as HEAD and the incoming branch, to understand both changes. Decide what the correct final code file should be, which may involve choosing one version or combining both changes. After removing the conflict markers, test the code, if the resolved file has no issue, stage the resolved file using git add and commit the merge. If a developer needs to cancel the merge, simply use git merge –abort.
 
-1. What is git reflog and when would you use it?
+8. What is git reflog and when would you use it?
    Git reflog is a history of where your git references(HEAD)have pointed on your local machine.
    We use it to recover commits or branch that appear to be lost. To reset or undo the merge. To see history of your branch and HEAD.
    If a developer accidently git reset –hard HEAD~1. You might think it is deleted but the git still knows where the previous HEAD before reset.
